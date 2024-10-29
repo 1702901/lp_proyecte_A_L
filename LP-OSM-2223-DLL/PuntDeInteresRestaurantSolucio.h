@@ -9,4 +9,5 @@ private:
 	string m_mobilitatReduida;
 public:
 	unsigned int getColor() override;
+	string getName() override { return m_name; }
 };
