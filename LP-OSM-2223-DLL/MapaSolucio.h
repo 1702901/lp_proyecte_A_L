@@ -9,7 +9,7 @@ class MapaSolucio : public MapaBase
 {
 private:
 	std::vector<PuntDeInteresBase*> m_puntsDeInteres;
-
+	std::vector<CamiBase*> m_camins;
 public:
 	MapaSolucio() { 
 		Coordinate coord1, coord2;
@@ -19,11 +19,15 @@ public:
 		coord2.lon = 2.1460477;
 
 		m_puntsDeInteres.push_back(new PuntDeInteresBotigaSolucio("bakery", "", "", "La Millor Pastisseria", coord1)); 
-		m_puntsDeInteres.push_back(new PuntDeInteresRestaurantSolucio("restaurant", "regional", "true", "yes", "El Millor Restaurant", coord2));
-	}
-	void getPdis(std::vector<PuntDeInteresBase*>&) override {
+		m_puntsDeInteres.push_back(new PuntDeInteresRestaurantSolucio("restaurant", "regional", "yes", "El Millor Restaurant", coord2));
 
 	}
+	void getPdis(std::vector<PuntDeInteresBase*>& a) override;
+	void getCamins(std::vector<CamiBase*>& camins) override;
+	void parsejaXmlElements(std::vector<XmlElement>& xmlElements) override;
+	void afegeixCami(const XmlElement& cami);
+	void afegeixNodeInteres(const XmlElement& node);
+	
 
 
 };

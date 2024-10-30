@@ -188,6 +188,7 @@
     </ClCompile>
     <ClCompile Include="PuntDeInteresBase.cpp" />
     <ClCompile Include="PuntDeInteresRestaurantSolucio.cpp" />
+    <ClCompile Include="MapaSolucio.cpp" />
     <ClCompile Include="Util.cpp" />
     <ClCompile Include="XML4OSMUtil.cpp" />
   </ItemGroup>

@@ -5,6 +5,7 @@ class CamiSolucio : public CamiBase
 {
 private:
 	std::vector<Coordinate> m_coordenades;
+	std::string m_highway;
 
 public:
 	//CamiSolucio() {}

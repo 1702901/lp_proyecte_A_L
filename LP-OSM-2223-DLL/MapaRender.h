@@ -8,6 +8,7 @@
 
 #include "MapaBase.h"
 #include "XML4OSMUtil.h"
+#include "MapaSolucio.h"
 
 
 class MapaRender {
