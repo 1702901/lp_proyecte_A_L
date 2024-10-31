@@ -4,6 +4,7 @@
 #define PUNT_DE_INTERES_BASE_H // Definir la macro
 #include "PuntDeInteresBotigaSolucio.h"
 #include "PuntDeInteresRestaurantSolucio.h"
+#include <map>
 
 class MapaSolucio : public MapaBase
 {
@@ -23,9 +24,10 @@ public:
 
 	}
 	void getPdis(std::vector<PuntDeInteresBase*>& a) override;
-	void getCamins(std::vector<CamiBase*>& camins) override;
+	void getCamins(std::vector<CamiBase*>& camins) override; //atributs
 	void parsejaXmlElements(std::vector<XmlElement>& xmlElements) override;
-	void afegeixCami(const XmlElement& cami);
+	
+	void afegeixCami(const XmlElement& cami); //atributs
 	void afegeixNodeInteres(const XmlElement& node);
 	
 
