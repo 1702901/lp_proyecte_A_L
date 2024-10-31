@@ -7,6 +7,11 @@ PuntDeInteresBase::PuntDeInteresBase() {
 	this->m_name = "undefinit";
 }
 
+PuntDeInteresBase::PuntDeInteresBase(const PuntDeInteresBase& copy) {
+	this->m_coord = Coordinate(copy.m_coord);
+	this->m_name = copy.m_name;
+}
+
 PuntDeInteresBase::PuntDeInteresBase(Coordinate coord, std::string name) {
 	this->m_name = name;
 	this->m_coord = coord;

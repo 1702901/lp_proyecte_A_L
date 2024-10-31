@@ -171,7 +171,7 @@ namespace LS_OSM_2223_WPF
         private void BackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             loadOSMData(loadedMap);
-
+            
             using (var pa = new PinnedArray<PoiBridge>())
             {
                 renderPois(pa.CreateArray);

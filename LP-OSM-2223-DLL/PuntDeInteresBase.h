@@ -11,6 +11,7 @@ class PuntDeInteresBase {
 
 	public:		
 		PuntDeInteresBase();
+		PuntDeInteresBase(const PuntDeInteresBase&);
 		PuntDeInteresBase(Coordinate coord, std::string name);
 
 		virtual std::string getName();

@@ -26,5 +26,11 @@
       <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.19041.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Update="..\x64\Debug\xerces-c_3_2D.dll">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
 
 </Project>

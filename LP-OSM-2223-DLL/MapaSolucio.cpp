@@ -2,8 +2,9 @@
 #include "MapaSolucio.h"
 
 void MapaSolucio::getPdis(std::vector<PuntDeInteresBase*>& a)  {
+	a.resize(m_puntsDeInteres.size());
 	for (int i = 0; i < m_puntsDeInteres.size(); i++)
-		a[i] = m_puntsDeInteres[i];
+		a[i] = new PuntDeInteresBase(*m_puntsDeInteres[i]);
 }
 
 
@@ -15,6 +16,7 @@ void MapaSolucio::getCamins(std::vector<CamiBase*>& camins) {
 }
 
 void MapaSolucio::afegeixCami(const XmlElement& cami) {
+	/*
 	std::vector<std::string> nodesRefs; //guardar referencies a nodes
 	std::map<std::string, std::string> tags;
 	//std::vector<Coordinate> coordenades;
@@ -34,6 +36,7 @@ void MapaSolucio::afegeixCami(const XmlElement& cami) {
 	}
 	//constructor sense acabar
 	m_camins.push_back(new CamiSolucio(nodesRefs, tags, cami.atributs[1].second));
+	*/
 }
 
 void MapaSolucio::afegeixNodeInteres(const XmlElement& node) {
@@ -41,6 +44,12 @@ void MapaSolucio::afegeixNodeInteres(const XmlElement& node) {
 }
 
 void MapaSolucio::parsejaXmlElements(std::vector<XmlElement>& xmlElements) {
+	/* Si se ha de eliminar
+	while(!m_puntsDeInteres.empty())
+		m_puntsDeInteres.pop_back();
+	while(!m_camins.empty())
+		m_camins.pop_back();
+	*/
 	for (int i = 0; i < xmlElements.size(); i++)
 	{
 		if (xmlElements[i].id_element == "node") 
