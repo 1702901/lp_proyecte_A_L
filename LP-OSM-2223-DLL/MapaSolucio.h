@@ -5,6 +5,7 @@
 #include "PuntDeInteresBotigaSolucio.h"
 #include "PuntDeInteresRestaurantSolucio.h"
 #include <map>
+#include <unordered_map>
 
 class MapaSolucio : public MapaBase
 {
@@ -22,13 +23,15 @@ public:
 		m_puntsDeInteres.push_back(new PuntDeInteresBotigaSolucio("bakery", "", "", "La Millor Pastisseria", coord1)); 
 		m_puntsDeInteres.push_back(new PuntDeInteresRestaurantSolucio("restaurant", "regional", "yes", "El Millor Restaurant", coord2));
 
+
+
 	}
-	void getPdis(std::vector<PuntDeInteresBase*>& a) override;
+	void getPdis(std::vector<PuntDeInteresBase*>& puntsDeInteres) override;
 	void getCamins(std::vector<CamiBase*>& camins) override; //atributs
 	void parsejaXmlElements(std::vector<XmlElement>& xmlElements) override;
 	
-	void afegeixCami(const XmlElement& cami); //atributs
-	void afegeixNodeInteres(const XmlElement& node);
+	void afegeixCami(const XmlElement& cami, unordered_map<string, Coordinate>& way_node); //atributs
+	void selectNodes(const XmlElement& node, unordered_map<string, Coordinate>& way_node);
 	
 
 

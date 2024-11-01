@@ -86,5 +86,8 @@
     <ClCompile Include="MapaSolucio.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CamiSolucio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

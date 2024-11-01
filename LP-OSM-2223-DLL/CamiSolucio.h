@@ -19,15 +19,10 @@ public:
 		};*/
 		return m_coordenades;
 	}
+	CamiSolucio(const CamiSolucio& copiar);
+	CamiSolucio* clone() override { return new CamiSolucio(*this); };
 	CamiSolucio(std::vector<Coordinate> coordenades,
-		std::map<std::string, std::string> tags, const std::string& id) {
-		m_id = id;
-		m_tags = tags;
-		for (const auto& nodeRef : coordenades)
-		{
-			m_coordenades.push_back(nodeRef);
-		}
-	}
+		std::map<std::string, std::string> tags, const std::string& id);
 		//nodesRefs, tags, cami.atributs[1].second
 	
 	/*

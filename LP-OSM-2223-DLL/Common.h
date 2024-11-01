@@ -15,6 +15,8 @@ typedef struct {
     double lon;
 } Coordinate;
 
+
+
 extern "C" typedef struct {
     int i;
     double lat;
