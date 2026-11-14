@@ -29,4 +29,4 @@ Windows con Visual Studio: abre `LP-OSM-2223.sln`, compila la solución y ejecut
 
 ## Estado
 
-Entrega parcial. Los puntos de interés funcionan. La construcción de los caminos (`MapaSolucio::afegeixCami`) quedó sin terminar.
+Completado
