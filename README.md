@@ -1,32 +1,32 @@
-# Mapa de OpenStreetMap con puntos de interés (LP)
+# OpenStreetMap viewer with points of interest (LP)
 
-Aplicación de Windows que lee un mapa de [OpenStreetMap](https://www.openstreetmap.org) (fichero XML) y muestra sus puntos de interés (tiendas, restaurantes...) con un color según el tipo.
+A Windows application that reads an [OpenStreetMap](https://www.openstreetmap.org) map (XML file) and displays its points of interest (shops, restaurants...) with a color that depends on their type.
 
-> Práctica de la asignatura **Laboratori de Programació (LP)** de la UAB, curso 2024-25. <!-- TODO: comprobad el nombre de la asignatura -->
-> Autores: **Alicia Medina Sillero** <!-- TODO: su GitHub o LinkedIn --> y **Andreu Elias Puigvert Gómez** ([@CatCodeMage](https://github.com/CatCodeMage)).
+> Coursework for the **Laboratori de Programació (LP)** course at UAB, 2024-25. <!-- TODO: check the course name -->
+> Authors: **Alicia Medina Sillero** <!-- TODO: her GitHub or LinkedIn --> and **Andreu Elias Puigvert Gómez** ([@CatCodeMage](https://github.com/CatCodeMage)).
 
-## Qué es nuestro y qué venía dado
+## What is ours and what was provided
 
-La asignatura nos dio el esqueleto del proyecto. Nosotros implementamos las clases `*Solucio`.
+The course gave us the project skeleton. We implemented the `*Solucio` classes.
 
-| Parte | Autoría |
+| Part | Author |
 |---|---|
-| Interfaz gráfica en WPF/C# (`LP-OSM-2223-WPF/`) | Asignatura |
-| Puente entre la DLL de C++ y la interfaz (`DLL-Bridge.cpp`), lectura de XML (`XML4OSMUtil`), `Util` | Asignatura |
-| Interfaces base: `MapaBase`, `CamiBase`, `PuntDeInteresBase` | Asignatura |
-| Librería Xerces-C para leer XML (`third-party/`) | Externa |
-| **`MapaSolucio`**: recorre los elementos del XML, separa los nodos de interés de los nodos de camino y crea los puntos de interés | **Nuestro** |
-| **`PuntDeInteresBotigaSolucio`** y **`PuntDeInteresRestaurantSolucio`**: tiendas y restaurantes con su color según el tipo (supermercado, estanco, panadería, cocina china, pizza, accesibilidad...) | **Nuestro** |
-| **`CamiSolucio`**: representación de un camino como lista de coordenadas | **Nuestro** |
+| WPF/C# graphical interface (`LP-OSM-2223-WPF/`) | Course |
+| Bridge between the C++ DLL and the interface (`DLL-Bridge.cpp`), XML reading (`XML4OSMUtil`), `Util` | Course |
+| Base interfaces: `MapaBase`, `CamiBase`, `PuntDeInteresBase` | Course |
+| Xerces-C library for XML parsing (`third-party/`) | Third party |
+| **`MapaSolucio`**: walks the XML elements, separates points of interest from path nodes and creates the points of interest | **Ours** |
+| **`PuntDeInteresBotigaSolucio`** and **`PuntDeInteresRestaurantSolucio`**: shops and restaurants with a color based on their type (supermarket, tobacco shop, bakery, Chinese cuisine, pizza, accessibility...) | **Ours** |
+| **`CamiSolucio`**: a path represented as a list of coordinates | **Ours** |
 
-## Tecnologías
+## Tech
 
 C++ (DLL) · C# / WPF · OpenStreetMap (XML) · Xerces-C · Visual Studio
 
-## Ejecutarlo
+## Running it
 
-Windows con Visual Studio: abre `LP-OSM-2223.sln`, compila la solución y ejecuta el proyecto WPF.
+Windows with Visual Studio: open `LP-OSM-2223.sln`, build the solution and run the WPF project.
 
-## Estado
+## Status
 
-Completado
+Completed
